@@ -29,6 +29,30 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+.post.featured {
+    position: relative;
+    background: url('images/pic01.jpg') no-repeat center center;
+    background-size: cover;
+    color: white; /* Ensure text is readable */
+    padding: 20px; /* Add padding to the content */
+}
+
+.post.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 0;
+}
+
+.post.featured .major {
+    position: relative;
+    z-index: 1;
+}
+
 body {
 	line-height: 1;
 }
